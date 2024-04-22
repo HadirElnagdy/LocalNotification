@@ -86,6 +86,14 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         completionHandler([.alert, .badge, .sound])
     }
     
+    @IBAction func navigate(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "anotherStoryBoard", bundle:nil)
+        
+
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "anotherViewController") as!
+        anotherViewController
+            self.present(nextViewController, animated:true, completion:nil)
+    }
 }
 
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wzj-wV-11w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wzj-wV-11w">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,33 +16,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpm-ue-cfQ">
-                                <rect key="frame" x="136" y="446" width="122" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpm-ue-cfQ">
+                                <rect key="frame" x="136" y="446" width="121" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="PLM-f7-pRm"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Set reminder"/>
                                 <connections>
                                     <action selector="calendarTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaB-mA-M3G"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyb-2l-o2a">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyb-2l-o2a">
                                 <rect key="frame" x="125" y="374" width="142" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="10 Sec Timeout"/>
                                 <connections>
                                     <action selector="intervalTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgg-Ac-b3T"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FV1-Lv-YAZ">
+                                <rect key="frame" x="112" y="559" width="171" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="another storyBoard"/>
+                                <connections>
+                                    <action selector="navigate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KG-6g-gB1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cpm-ue-cfQ" firstAttribute="top" secondItem="gyb-2l-o2a" secondAttribute="bottom" constant="33" id="QP1-y8-f2I"/>
+                            <constraint firstItem="gyb-2l-o2a" firstAttribute="centerX" secondItem="Cpm-ue-cfQ" secondAttribute="centerX" id="U8Y-rK-2ag"/>
+                            <constraint firstAttribute="bottom" secondItem="Cpm-ue-cfQ" secondAttribute="bottom" constant="367" id="aWG-JC-MgF"/>
+                            <constraint firstItem="gyb-2l-o2a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="271" id="bGR-Jv-Zet"/>
+                            <constraint firstItem="Cpm-ue-cfQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="hkH-h6-WB6"/>
+                            <constraint firstItem="FV1-Lv-YAZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="l55-go-Hbg"/>
+                            <constraint firstItem="gyb-2l-o2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="moc-h2-3d2"/>
+                            <constraint firstItem="FV1-Lv-YAZ" firstAttribute="top" secondItem="Cpm-ue-cfQ" secondAttribute="bottom" constant="74" id="nol-GC-Pdy"/>
+                            <constraint firstItem="Cpm-ue-cfQ" firstAttribute="centerX" secondItem="FV1-Lv-YAZ" secondAttribute="centerX" id="r8B-J2-Znd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ef9-9k-3UK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="854.19847328244271" y="3.5211267605633805"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="Ekv-mX-VcP">
+            <objects>
+                <viewControllerPlaceholder id="gFb-xk-Lln" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUB-aP-eoK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147" y="343"/>
         </scene>
         <!--New View Controller-->
         <scene sceneID="50w-Ti-TPX">
